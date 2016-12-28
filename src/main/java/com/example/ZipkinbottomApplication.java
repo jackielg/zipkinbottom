@@ -26,6 +26,7 @@ public class ZipkinbottomApplication {
     public String home(){
         LOG.log(Level.INFO, "Bottom is being called");
         LOG.log(Level.INFO, "Testing by LWA!");
+        LOG.log(Level.INFO, "Testing by LWA!!");
         return "Hello World|BOTTOM";
     }
 
