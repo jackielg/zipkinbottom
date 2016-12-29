@@ -17,6 +17,8 @@ import java.util.logging.Logger;
 public class ZipkinbottomApplication {
 
 	private static final Logger LOG = Logger.getLogger(ZipkinbottomApplication.class.getName());
+	
+	private static int counter = 0;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ZipkinbottomApplication.class, args);
@@ -24,10 +26,11 @@ public class ZipkinbottomApplication {
 
     @RequestMapping("/")
     public String home(){
-        LOG.log(Level.INFO, "Bottom is being called");
+    	counter = counter + 1;
+        LOG.log(Level.INFO, "Bottom is being called " + counter);
         LOG.log(Level.INFO, "Testing by LWA!");
-        LOG.log(Level.INFO, "Testing by LWA!!");
-        return "Hello World|BOTTOM";
+        
+        return "Hello World, This is zipkinbottom, I have been called " + counter + " times.";
     }
 
     @Autowired
