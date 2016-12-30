@@ -30,7 +30,7 @@ public class ZipkinbottomApplication {
         LOG.log(Level.INFO, "Bottom is being called " + counter);
         LOG.log(Level.INFO, "Testing by LWA!");
         
-        return "Hello World, This is zipkinbottom, I have been called " + counter + " times.";
+        return "Hello World, This is zipkinbottom, I have been called " + counter + " times. Powered by LWA.";
     }
 
     @Autowired
